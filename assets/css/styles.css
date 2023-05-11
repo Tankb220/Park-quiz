@@ -2,8 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+body{
+    background: gray;
 }
 header{
-    display:flex;
-    justify-content: center;
+    display:flex; 
+    justify-content: space-between;
+    flex-direction: column;
+}
+.start-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%
 }
