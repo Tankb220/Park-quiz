@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
-</head>
-<header>
-    <div class="title">National Park Quiz</div>
-    <div class="score">
-        <p> View High scores</p>
- </div>
- <div class="timer"> Time left</div>
- <div class="timer-sec">60</div>
-</header>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
 
-<body>
-   <div class="start-btn"><button>Start Quiz</button></div>
-   <button  class="quit">Quit Quiz</button>
-   <button  class="restart">Restart Quiz</button>
-    <div class="quiz-box">
-    <section>
+  <body>
+    <header>
+      <div class="title">National Park Quiz</div>
+      <div class="score">
+        <p>View High scores</p>
+      </div>
+      <div class="timer">Time left</div>
+      <div class="timer-sec someOtherClass">Text content goes here</div>
+    </header>
+    <button class="start-btn">Start Quiz</button>
+
+    <div class="quiz-box hide">
+        This is your quiz box content
+      <section>
         <div class="question-text">
-            <!-- Insert questions form JavaScript -->
+          <!-- Insert questions form JavaScript -->
         </div>
         <div class="options">
-            <!-- Insert options from JavaScript -->
-         </div>
-        </section>
-    
-     <div class="control">
-        <button  id="next">Next</button>
-     </div>
+          <!-- Insert options from JavaScript -->
+        </div>
+      </section>
+
+      <div class="control">
+        <button class="next">Next</button>
+        <button class="restart">Restart Quiz</button>
+      </div>
     </div>
-     <div class="result-box">
-     </div>
-     <div class=" compl-text">You've finished the Quiz!</div>
-     <div class="Score">
-        <!-- score results inserted from Java -->
-     </div>
+    <div class="result-box"></div>
+    <div class="compl-text">You've finished the Quiz!</div>
+    <div class="Score">
+      <!-- score results inserted from Java -->
+    </div>
+    <button class="submit">Submit</button>
     <script src="assets/css/js/script.js"></script>
-</body>
+  </body>
 </html>

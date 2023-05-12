@@ -1,19 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
-    font-family:'Times New Roman', Times, serif;
+
+.quiz-box {
+    border: solid 3px red;
 }
-body{
-    background: gray;
-}
-header{
-    display:flex; 
-    justify-content: space-between;
-    flex-direction: column;
-}
-.start-btn{
-    position: absolute;
-    top: 50%;
-    left: 50%
+
+.hide {
+    display: none
 }
