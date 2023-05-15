@@ -11,37 +11,50 @@
 
   <body>
     <header>
-      <div class="title">National Park Quiz</div>
-      <div class="score">
-        <p>View High scores</p>
+      <div id="start" class="card ">
+        <h2 id=title>National Park Quiz</h2>
+        <p> Answer the questions about national parks in the given time, incorrect answers will penalize your score/time by ten seconds</p>
+        <button id="start-button" class="button">Start Quiz</button>
       </div>
-      <div class="timer">Time left</div>
-      <div class="timer-sec someOtherClass">Text content goes here</div>
-    </header>
-    <button class="start-btn">Start Quiz</button>
+      <div hidden id="question-card" class="card"></div>
+      
+      <h2 id="question-text"></h2>
 
-    <div class="quiz-box hide">
-        This is your quiz box content
-      <section>
-        <div class="question-text">
-          <!-- Insert questions form JavaScript -->
-        </div>
-        <div class="options">
-          <!-- Insert options from JavaScript -->
-        </div>
-      </section>
-
-      <div class="control">
-        <button class="next">Next</button>
-        <button class="restart">Restart Quiz</button>
+      <div id="quiz-options">
+        <button id="option0" class="opt-buttton"></button>
+        <button id="option1" class="opt-buttton"></button>
+        <button id="option2" class="opt-buttton"></button>
+        <button id="option3" class="opt-buttton"></button>
       </div>
+      
+      <div id="resultdiv">
+        <hr>
+        <p id="result-text"></p>
+      </div>
+      
+      <div hidden id=score-card class="card">
+        <h2>Finished</h2>
+        <p>Your score is <span id=score></span>.</p>
+        <form class="inline-form" id="submission-form">
+              <label for="initials">Enter initials: </label>
+              <input type="text" id="initials">
+              <button id="submit" class="button">Submit</button>
+        </form>
     </div>
-    <div class="result-box"></div>
-    <div class="compl-text">You've finished the Quiz!</div>
-    <div class="Score">
-      <!-- score results inserted from Java -->
+
+    <div hidden id=leaderboard class="card">
+        <h2>Highscores</h2>
+        <ol id="highscore">
+        </ol>
+        <div class="inline">
+            <button id="back" class="button">Go Back</button>
+            <button id="clear" class="button">Clear Highscores</button>
+        </div>
     </div>
-    <button class="submit">Submit</button>
-    <script src="assets/css/js/script.js"></script>
-  </body>
+
+</main>
+
+<script src="./assets/css/js/script.js"></script>
+</body>
+
 </html>
