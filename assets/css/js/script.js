@@ -1,90 +1,75 @@
-const start_btn = document.querySelector(".start-btn");
-const quiz_box = document.querySelector(".quiz-box");
-const timer = document.querySelector(".timer");
-const timer_sec = document.querySelector(".timer-sec");
-const options = document.querySelector(".options");
-let quizTime = 7;
-const question_text = [
+//questions //
+const questions = [
   {
-        question: "What was the first national park in the United States?",
-        id:0,
-        a:"Yellow Stone National Park", isCorrect: False,
-        b:"Great Smoky Mountains National Park", isCorrect: False,
-        c:"Arches National Park", isCorrect: True,
-        d:"Grand Canyon National Park", isCorrect: False,
+    questionText: "What was the first National park in the United States?",
+    options:  [
+      "1. Arches ", 
+    "2. Grand Canyon", 
+    "3. Yellowstone", 
+    "4. Zion"],
+    answer: "3. Yellowstone",
   },
-       
-  }
-    //{
-        //question:"What park has the tallest mountain in north america",
-        //a:"Rockies National Park",
-        //b:"Grand Teton National Park",
-        //c:"Denali National Park",
-      //  d:"Yosemite",
-    //    correct:"d",
-  //  }//
-]
+  {
+    questionText: "Which park has the tallest mountain in North America?",
+    options: [
+      "1. Great Smoky Mountains",
+      "2. Yosemite",
+      "3. Death Valley",
+      "4. Denali",
+    ],
+    answer: "4. Denali",
+  },
+  {
+    questionText:
+      "Which park has the deepest lake in the United States?",
+    options: [
+      "1. Crater Lake",
+      "2. Acadia",
+      "3. Grand Canyon",
+       "4. MOunt Rainer"],
+    answer: "1. Crater Lake",
+  },
+  {
+    questionText:
+      "Which park has the world's longest known cave system",
+    options: [
+      "1. Hot Springs",
+      "2. Bryce Canyon",
+      "3. Carlbad Caverns",
+      "4. Mammoth Cave",
+    ],
+    answer: "4. Mammoth Cave",
+  },
+  {
+    questionText:
+      "Which park was establish in 2020 and is the deepest gorge east of the Mississippi River",
+    options: [
+      "1. New River Gorge",
+       "2. Great Smokey Mountains", 
+       "3. Shenadoah", 
+       "4. Cuyahoga Valley"],
+    answer: "1. New River Gorge",
+  },
+];
 
-function startQuizTime() {
-  // set the textContent of timer_sec when the quiz begins
-  timer_sec.textContent = quizTime;
-  timer_sec.setAttribute("id", "someIdValue");
-  console.log(timer_sec.classList);
+const startCard = document.querySelector("#start");
+const questionCard = document.querySelector("#question-hidden");
+const scoreCard = document.querySelector("#score-hidden");
+const leaderboardCard = document.querySelector("#leaderboard-hidden");
 
-  // let's call our set interval function
-  const intervalId = setInterval(function() {
-    if(quizTime == 0) {
-      alert('Quiz time is finished');
-      clearInterval(intervalId);
-      // right now, all your doing is displaying some alert message, but
-      // you can do other stuff too, like run some custom function here
-      // myCustomFunction();
-      return null;
-    }
-    quizTime = quizTime - 1;
-    timer_sec.textContent = quizTime;
-  }, 1000)
+
+function hideCards() {
+  startCard.setAttribute("hidden", true);
+  questionCard.setAttribute("hidden", true);
+  scoreCard.setAttribute("hidden", true);
+  leaderboardCard.setAttribute("hidden", true);
 }
 
-function beginQuiz() {
-  console.log('quiz started');
-  quiz_box.classList.toggle("hide");
+const resultDiv = document.querySelector("#resultdiv");
+const resultText = document.querySelector("#result-text");
+
+//hide result div//
+function hideResultText() {
+  resultDiv.style.display = "none";
 }
-function buildQuiz(){
-  const output = [];
-
-  question_text.forEach(
-    (currentQuestion, questionNumber) => {
-      const answers = [];
-
-      for(letter in currentQuestion.answers){
-        
-
-        answers.push(
-          `<label>`
-          <input type="radio" name=
-        )
-      }
-
-    }
-  )
-}
-
-
-// define a function, no big deal
-// function mySpecialFunction() {
-//   console.log('You clicked the start button');
-//   timer_sec.textContent = "59";
-// }
-
-//start_btn.addEventListener("click", mySpecialFunction);
-start_btn.addEventListener("click", startQuizTime);
-//the below is equivalent to the line above
-start_btn.addEventListener("click", beginQuiz);
-
-// so is this
-// start_btn.addEventListener("click", () => {
-//   console.log('You clicked the start button');
-//   console.log('Great job');
-// }); 
 
