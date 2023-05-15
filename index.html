@@ -11,6 +11,10 @@
 
   <body>
     <header>
+      <a id=leaderboard-link>View Highscores <i class="fas fa-hand-point-left fa-lg"></i>
+      </i></a> 
+      <time>Time: <span id="time"></span></time>
+  </header>
       <div id="start" class="card ">
         <h2 id=title>National Park Quiz</h2>
         <p> Answer the questions about national parks in the given time, incorrect answers will penalize your score/time by ten seconds</p>
@@ -21,10 +25,10 @@
       <h2 id="question-text"></h2>
 
       <div id="quiz-options">
-        <button id="option0" class="opt-buttton"></button>
-        <button id="option1" class="opt-buttton"></button>
-        <button id="option2" class="opt-buttton"></button>
-        <button id="option3" class="opt-buttton"></button>
+        <button id="option0" class="opt-button"></button>
+        <button id="option1" class="opt-button"></button>
+        <button id="option2" class="opt-button"></button>
+        <button id="option3" class="opt-button"></button>
       </div>
       
       <div id="resultdiv">
@@ -42,7 +46,7 @@
         </form>
     </div>
 
-    <div hidden id=leaderboard class="card">
+    <div hidden id=leaderboard-hidden class="card">
         <h2>Highscores</h2>
         <ol id="highscore">
         </ol>
