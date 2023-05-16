@@ -73,3 +73,57 @@ function hideResultText() {
   resultDiv.style.display = "none";
 }
 
+//these variables are required globally//
+var intervalID;
+var time;
+var currentQuestion;
+
+document.querySelector("#start-button").addEventListener("click", startQuiz);
+
+function startQuiz() {
+  //hide any visible cards, show  question card//
+  hideCards();
+  questionCard.removeAttribute("hidden");
+
+  //assign 0 to currentQuestion when start  is clicked, then display a question on the page//
+  currentQuestion = 0;
+  displayQuestion();
+
+  //set total time depending on number of questions//
+  time = questions.length * 10;
+
+  //executes function "countdown" every 1000ms to update time and display on page//
+  intervalID = setInterval(countdown, 1000);
+
+  displayTime();
+}
+
+//if time runs out then end quiz//
+function countdown() {
+  time--;
+  displayTime();
+  if (time < 1) {
+    endQuiz();
+  }
+}
+
+//display time on page//
+const timeDisplay = document.querySelector("#time");
+function displayTime() {
+  timeDisplay.textContent = time;
+}
+
+//display the question and answer options for the current question//
+function displayQuestion() {
+  let question = questions[currentQuestion];
+  let options = question.options;
+
+  let h2QuestionElement = document.querySelector("#question-text");
+  h2QuestionElement.textContent = question.questionText;
+
+  for (let i = 0; i < options.length; i++) {
+    let option = options[i];
+    let optionButton = document.querySelector("#option" + i);
+    optionButton.textContent = option;
+  }
+}
