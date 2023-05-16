@@ -26,7 +26,7 @@ const questions = [
       "1. Crater Lake",
       "2. Acadia",
       "3. Grand Canyon",
-       "4. MOunt Rainer"],
+       "4. Mount Rainer"],
     answer: "1. Crater Lake",
   },
   {
